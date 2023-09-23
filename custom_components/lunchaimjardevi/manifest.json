@@ -4,7 +4,7 @@
   "codeowners": ["@popeen"],
   "config_flow": true,
   "documentation": "https://github.com/popeen/Home-Assistant-Custom-Component-Luncha-I-Mjardevi",
-  "iot_class": "assumed_state",
+  "iot_class": "cloud_polling",
   "issue_tracker": "https://github.com/popeen/Home-Assistant-Custom-Component-Luncha-I-Mjardevi/issues",
-  "version": "0.1.0"
+  "version": "2023.09.1"
 }
