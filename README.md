@@ -10,7 +10,7 @@
 This custom component will create sensors for what is being served at the restaurants in and around Mjärdevi Science Park in Linköping, Sweden.
 The sensors are compatible with the [Skolmat Lovelace card](https://github.com/Kaptensanders/skolmat-card) by [Kaptensanders](https://github.com/Kaptensanders)
 
-You will need a free API key to the [Luncha I Mjärdevi](https://lunchaimjardevi.com/) API. You can get that by emailing me at luncha@popeen.com
+You will need a free API key to the [Luncha I Mjärdevi](https://lunchaimjardevi.com/) API. You can get one [here](https://lunchaimjardevi.com/api/)
 
 I have started the progress of getting this repo included in the default HACS library but for now you have to add it to your HACS using [these instructions](https://hacs.xyz/docs/faq/custom_repositories/)
 
