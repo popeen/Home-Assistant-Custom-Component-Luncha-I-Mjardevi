@@ -9,7 +9,7 @@
 [![Buy me a coffee][buymeacoffee-shield]][buymeacoffee]
 
 This custom component will create sensors for what is being served at the restaurants in and around Mjärdevi Science Park in Linköping, Sweden.
-The sensors are compatible with the Skolmat Lovelace card by Kaptensanders, https://github.com/Kaptensanders/skolmat-card
+The sensors are compatible with the [Skolmat Lovelace card](https://github.com/Kaptensanders/skolmat-card) by [Kaptensanders](https://github.com/Kaptensanders)
 
 You will need a free API key to the [Luncha I Mjärdevi](https://lunchaimjardevi.com/) API. You can get that by emailing me at luncha@popeen.com
 
