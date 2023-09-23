@@ -18,6 +18,11 @@ After installing the integration using HACS and restarting your server you simpl
 
 [![add-integration-shield]][add-integration]
 
+
+|Parameter| What to put |
+|--|--|
+| API Key | Enter the API key you got from https://lunchaimjardevi.com/api |
+
 [releases-shield]: https://img.shields.io/github/release/popeen/Home-Assistant-Custom-Component-Luncha-I-Mjardevi.svg
 [releases]: https://github.com/popeen/Home-Assistant-Custom-Component-Luncha-I-Mjardevi/releases
 [project-stage-shield]: https://img.shields.io/badge/project%20stage-ready%20for%20use-green.svg
