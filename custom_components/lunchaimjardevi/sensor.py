@@ -30,7 +30,7 @@ async def async_setup_entry(hass, config_entry, async_add_entities):
     restaurantAPIList = await get_restaurants(session, apikey)
     restaurantEntitesList = []
     for restaurant in restaurantAPIList['restaurants']:
-        restaurantEntitesList.append(LunchaIMjardeviMenu(restaurant['id'], restaurant['name'], restaurant['coordLat'], restaurant['coordLong'], apikey))
+        restaurantEntitesList.append(LunchaIMjardeviMenu(restaurant['id'], restaurant['name'], apikey))
 
 
     async_add_entities(restaurantEntitesList, update_before_add=True)
@@ -52,18 +52,24 @@ async def get_menu(session, id, apikey):
         return data
 
 
+async def get_restaurant_info(session, id, apikey):
+    """This is the data we are after"""
+    url = "https://lunchaimjardevi.com/api/v4/getRestaurantInfo?id=" + id + "&key=" + apikey
+    async with session.get(url) as resp:
+        data = await resp.json()
+        return data
+
+
 class LunchaIMjardeviMenu(Entity):
     """Representation of a Sensor."""
 
-    def __init__(self, id, name, lat, long, apikey):
+    def __init__(self, id, name, apikey):
         """Initialize the sensor."""
 
         self._attr_unique_id = "lunchaimjardevi_" + id
         self._apikey = apikey
         self._id = id
         self._name = name
-        self._latitude = lat
-        self._longitude = long
         self._state = None
         self._icon = "mdi:poll"
         self._weekDays = ['Måndag', 'Tisdag', 'Onsdag', 'Torsdag', 'Fredag', 'Lördag', 'Söndag']
@@ -88,7 +94,8 @@ class LunchaIMjardeviMenu(Entity):
         """Get the latest data and updates the states."""
         session = async_get_clientsession(self.hass)
         # Get all data
-        data = await get_menu(session, self._id, self._apikey)
+        menuData = await get_menu(session, self._id, self._apikey)
+        restaurantInfo = await get_restaurant_info(session, self._id, self._apikey)
         # Only use the data for the specific sensor
 
         entryDate = date.today()
@@ -107,18 +114,25 @@ class LunchaIMjardeviMenu(Entity):
         }
 
         state = ""
-        if data is not None and 'menuItems' in data:
-            for item in data['menuItems']:
-                state += item['title'] + "\n"
+        csv = ""
+        if menuData is not None and 'menuItems' in menuData:
+            i = 0
+            for item in menuData['menuItems']:
+                if(i != 0):
+                    state += ", "
+                i += 1
+                state += item['title'].replace(",", "")
                 dayEntry['courses'].append(item['title'])
+
 
         menu[week].append(dayEntry)
 
-        state.rstrip()
         self._state = state
         self._attr_extra_state_attributes = {
-            "calendar": menu,
-            "latitude": self._latitude,
-            "longitude": self._longitude
+            "latitude": restaurantInfo['info']['coordLat'],
+            "longitude": restaurantInfo['info']['coordLong'],
+            "website": restaurantInfo['info']['website'],
+            "note": restaurantInfo['info']['note'],
+            "calendar": menu
         }
         return None
