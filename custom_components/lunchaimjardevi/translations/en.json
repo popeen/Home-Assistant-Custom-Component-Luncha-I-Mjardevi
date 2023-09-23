@@ -1,0 +1,15 @@
+{
+    "config": {
+        "error": {
+            "unknown": "Unknown error"
+        },
+        "step": {
+            "user": {
+				"description": "Enter your API key",
+                "data": {
+                    "apikey": "API Key"
+                }
+            }
+        }
+   }
+}
