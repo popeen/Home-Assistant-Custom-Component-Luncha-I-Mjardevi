@@ -14,8 +14,6 @@ You will need a free API key to the [Luncha I Mjärdevi](https://lunchaimjardevi
 
 The component is not fully ready for use yet, it does work but will most likely get breaking changes before full release. Once it is ready it will be HACS compatible and submitted to the default HACS repository.
 
-[![add-integration-shield]][add-integration]
-
 [releases-shield]: https://img.shields.io/github/release/popeen/Home-Assistant-Custom-Component-Luncha-I-Mjardevi.svg
 [releases]: https://github.com/popeen/Home-Assistant-Custom-Component-Luncha-I-Mjardevi/releases
 [project-stage-shield]: https://img.shields.io/badge/project%20stage-not%20ready%20for%20use-red.svg
