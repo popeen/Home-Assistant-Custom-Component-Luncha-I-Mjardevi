@@ -8,13 +8,12 @@
 
 [![Buy me a coffee][buymeacoffee-shield]][buymeacoffee]
 
-This custom component will create sensors for what is being served at the restaurants in and around Mjärdevi Science Park in Linköping, Sweden. 
+This custom component will create sensors for what is being served at the restaurants in and around Mjärdevi Science Park in Linköping, Sweden.
+The sensors are compatible with the [Skolmat Lovelace card](https://github.com/Kaptensanders/skolmat-card) by [Kaptensanders](https://github.com/Kaptensanders)
 
 You will need a free API key to the [Luncha I Mjärdevi](https://lunchaimjardevi.com/) API. You can get that by emailing me at luncha@popeen.com
 
 The component is not fully ready for use yet, it does work but will most likely get breaking changes before full release. Once it is ready it will be HACS compatible and submitted to the default HACS repository.
-
-[![add-integration-shield]][add-integration]
 
 [releases-shield]: https://img.shields.io/github/release/popeen/Home-Assistant-Custom-Component-Luncha-I-Mjardevi.svg
 [releases]: https://github.com/popeen/Home-Assistant-Custom-Component-Luncha-I-Mjardevi/releases
