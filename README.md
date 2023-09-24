@@ -4,6 +4,7 @@
 ![Project Stage][project-stage-shield]
 [![issues-shield]](issues)
 [![License][license-shield]](LICENSE.md)
+[![hacs_badge][hacs-shield]][hacs]
 
 [![Buy me a coffee][buymeacoffee-shield]][buymeacoffee]
 
