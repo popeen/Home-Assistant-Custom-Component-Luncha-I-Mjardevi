@@ -1,7 +1,8 @@
 {
     "config": {
         "error": {
-            "unknown": "Unknown error"
+            "unknown": "Unknown error",
+            "invalid_api_key": "The entered key is invalid"
         },
         "step": {
             "user": {
