@@ -1,0 +1,16 @@
+{
+    "config": {
+        "error": {
+            "unknown": "Erro desconhecido",
+            "invalid_api_key": "Chave de api invalida"
+        },
+        "step": {
+            "user": {
+				"description": "Inserir a chave de API",
+                "data": {
+                    "apikey": "Chave de API"
+                }
+            }
+        }
+   }
+}
